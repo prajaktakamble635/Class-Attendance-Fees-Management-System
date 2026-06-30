@@ -1,0 +1,3 @@
+/* Copyright (c) 2024 Soft The Next, All Rights Reserved. */
+
+"use strict";const isFinite=require("./isFinite"),isSafeNumber=require("./isSafeNumber");function toOrdinal(t){const e=parseInt(t,10);if(!isFinite(e))throw new TypeError("Not a finite number: "+t+" ("+typeof t+")");if(!isSafeNumber(e))throw new RangeError("Input is not a safe number, it’s either too large or too small.");const r=String(e),i=Math.abs(e%100),n=i>=11&&i<=13,o=r.charAt(r.length-1);return r+(n?"th":"1"===o?"st":"2"===o?"nd":"3"===o?"rd":"th")}module.exports=toOrdinal;

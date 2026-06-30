@@ -1,0 +1,1 @@
+{"rules": [{"note": "Computer Application and Economics Application cannot be chosen together.", "type": "mutually_exclusive_pair", "pairs": [["ICSE10-COM", "ICSE10-ECO"]]}], "optional_pool": ["ICSE10-PHY", "ICSE10-CHE", "ICSE10-BIO", "ICSE10-MATH", "ICSE10-COM", "ICSE10-ECO", "ICSE10-HIN"]}

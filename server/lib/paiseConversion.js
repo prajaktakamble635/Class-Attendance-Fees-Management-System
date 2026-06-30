@@ -1,0 +1,3 @@
+/* Copyright (c) 2024 Soft The Next, All Rights Reserved. (Version 1.0.15) */
+
+const paiseConversion=e=>{const n=["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"],o=["Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"],t=["Ten","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"],r=["","Thousand","Lakh","Crore"],i=e=>0===e?"Zero":e<10?n[e]:e>=11&&e<=19?o[e-11]:e<100?t[Math.floor(e/10)-1]+(e%10!=0?` ${n[e%10]}`:""):n[Math.floor(e/100)]+" Hundred"+(e%100!=0?` ${i(e%100)}`:"");if(0===e)return"Zero";let h="",s=0;for(;e>0;)e%1e3!=0&&(h=`${i(e%1e3)} ${r[s]} ${h}`),e=Math.floor(e/1e3),s++;return h.trim()};module.exports={paiseConversion:paiseConversion};

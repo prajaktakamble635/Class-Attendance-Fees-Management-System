@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+:root {
+    --scrollbar-track-light: #f1f1f1;
+    --scrollbar-track-dark: #37474f;
+}
+
+.loader {
+    border-top-color: #3498db;
+}
+
+.dark {
+    --scrollbar-track-color: var(--scrollbar-track-dark);
+}
+
+.light-theme {
+    --scrollbar-track-color: var(--scrollbar-track-light);
+}
+
+/* Apply scrollbar track color */
+::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color);
+    border-radius: 2px;
+}
+
+/*::-webkit-scrollbar-track {*/
+/*    background-color: #f1f1f1;*/
+/*    border-radius: 2px;*/
+/*}*/
+
+::-webkit-scrollbar-thumb {
+    background-color: #a9a9a9;
+    border-radius: 4px;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.5s ease-in-out;
+}
+
+.Toastify__toast-container {
+    z-index: 10000;
+}
+
+.custom-select__container {
+    /* container styles */
+    z-index: 10000;
+}
+
+.custom-select__control {
+    /* control styles */
+    z-index: 10000;
+}
+
+.custom-select__menu {
+    /* menu styles */
+    font-size: 0.7rem;
+    background-color: lightgray;
+    color: black;
+    z-index: 10000;
+}
+
+.custom-select__option {
+    /* option styles */
+    font-size: 0.7rem;
+    background-color: lightgray;
+    color: black;
+    z-index: 10000;
+}
+
+.custom-select__option:hover {
+    /* option hover styles */
+    font-size: 0.7rem;
+    background-color: lightgray;
+    color: black;
+}
+
+.custom-select__option--focused {
+    /* focused option styles */
+    font-size: 0.7rem;
+    background-color: lightgray;
+    color: black;
+}
+
+/* Styles for the progress bar container */
+.progress-bar-container {
+    width: 100%;
+    background-color: #f3f3f3; /* Set the background color of the progress bar container */
+    height: 4px;
+    overflow: hidden; /* Hide overflow to keep the rainbow colors within the container */
+    border-radius: 2px;
+}
+
+/* Styles for the animated progress bar */
+.progress-bar {
+    height: 100%;
+    width: 100%; /* Initially set the width to 100% */
+    background: linear-gradient(to right,
+    red, orange, yellow, green, blue, indigo, violet);
+    background-size: 1400% 100%; /* 7 colors in the gradient, so background-size is set to 7 * 100% = 700% */
+    animation: progress-animation 5s infinite linear; /* Animation lasts for 5 seconds and loops infinitely */
+}
+
+/* Keyframes for the animation */
+@keyframes progress-animation {
+    0% {
+        background-position: 0 0; /* Start position of the rainbow gradient */
+    }
+    100% {
+        background-position: 100% 0; /* End position of the rainbow gradient */
+    }
+}
+
+/* Styles for the loading text */
+.loading-text {
+    font-size: 16px;
+    font-weight: normal;
+    background: linear-gradient(to right,
+    red, orange, green, blue, indigo, violet);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: rainbow-text-animation 5s infinite alternate-reverse;
+}
+
+/* Styles for the loading text */
+.loading-text-dashboard {
+    font-size: 24px;
+    font-weight: normal;
+    background: linear-gradient(to right,
+    red, orange, green, blue, indigo, violet);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: rainbow-text-animation 5s infinite alternate-reverse;
+}
+
+/* Keyframes for the rainbow text animation */
+@keyframes rainbow-text-animation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Chrome, Safari, Edge */
+.no-spinner::-webkit-inner-spin-button,
+.no-spinner::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.no-spinner {
+  -moz-appearance: textfield;
+}

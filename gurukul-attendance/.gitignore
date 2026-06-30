@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Environment / secrets
+.env
+
+# Runtime data (auto-created, machine-specific)
+logs/*
+!logs/.gitkeep
+json/attendance/*
+!json/attendance/.gitkeep
+
+# Misc logs
+*.log

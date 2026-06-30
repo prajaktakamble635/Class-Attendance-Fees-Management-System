@@ -1,0 +1,74 @@
+{
+  "rules": [
+    {
+      "type": "exclude_if_selected",
+      "if_selected": {
+        "HSC12-IT": [
+          "HSC12-CS1",
+          "HSC12-CS2"
+        ],
+        "HSC12-BIO": [
+          "HSC12-CS1",
+          "HSC12-CS2"
+        ],
+        "HSC12-CS1": [
+          "HSC12-BIO",
+          "HSC12-IT",
+          "HSC12-GEO"
+        ],
+        "HSC12-CS2": [
+          "HSC12-BIO",
+          "HSC12-IT",
+          "HSC12-GEO"
+        ],
+        "HSC12-GEO": [
+          "HSC12-CS1",
+          "HSC12-CS2"
+        ]
+      }
+    },
+    {
+      "type": "conditional_exclude_when_selected_all",
+      "cases": [
+        {
+          "note": "If both Math and Biology are selected, Geography cannot be chosen.",
+          "exclude": [
+            "HSC12-GEO"
+          ],
+          "when_selected_all": [
+            "HSC12-MATH",
+            "HSC12-BIO"
+          ]
+        },
+        {
+          "note": "If both Math and Biology are selected, Geography cannot be chosen.",
+          "exclude": [
+            "HSC12-BIO"
+          ],
+          "when_selected_all": [
+            "HSC12-MATH",
+            "HSC12-GEO"
+          ]
+        },
+        {
+          "note": "If both Math and Biology are selected, Geography cannot be chosen.",
+          "exclude": [
+            "HSC12-MATH"
+          ],
+          "when_selected_all": [
+            "HSC12-GEO",
+            "HSC12-BIO"
+          ]
+        }
+      ]
+    }
+  ],
+  "optional_pool": [
+    "HSC12-MATH",
+    "HSC12-BIO",
+    "HSC12-IT",
+    "HSC12-GEO",
+    "HSC12-CS1",
+    "HSC12-CS2"
+  ]
+}

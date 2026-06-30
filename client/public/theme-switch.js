@@ -1,0 +1,1 @@
+const t=localStorage.theme;const e=document.documentElement;const r=e.style;const n='--scrollbar-track-color';if('dark'===t||!('theme'in localStorage)&&window.matchMedia('(prefers-color-scheme: dark)').matches){e.classList.add('dark');r.setProperty(n,'#37474f');}else{e.classList.remove('dark');r.setProperty(n,'#f1f1f1');}
